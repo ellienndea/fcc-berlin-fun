@@ -117,3 +117,32 @@ li {
         animation: menu-slide-in 0.5s forwards;
       }
 }
+
+
+/*** Sammy's styles ***/
+#sammy .redirectButton {
+  
+  padding: 1rem;
+  margin-right: .25rem;
+  background: #348AA7;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 2.25rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 0px #348aa7;
+  border-bottom: 2px solid #30809b;
+}
+#sammy .redirectButton:hover {
+  background: #2e7a94;
+  box-shadow: 0 4px 1px #2e7a94;
+  border-bottom: 2px solid #2a7088;
+  transition: all 0.1s ease-in;
+}
+#sammy .redirectButton:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  box-shadow: none;
+}
