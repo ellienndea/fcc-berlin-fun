@@ -13,6 +13,9 @@ html {
   img {
     height: auto;
   }
+  header{
+    font-family: courier new, monospace;
+  }
   /* burger menu */
   #div-burger-container {
     display: flex;
