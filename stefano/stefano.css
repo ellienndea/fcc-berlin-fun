@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 13rem;
+  margin-bottom: 4rem;
+}
+
+p {
+  font-size: 5rem;
+  margin-bottom: 8rem;
+}
+
+main {
+  padding: 4rem 2rem 2rem 2rem;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 25rem;
+  font-size: 6rem;
+  background-color: pink;
+
+  padding: 1em 1.5em;
+
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.btn a {
+  color: yellow;
+  text-decoration: none;
+}
+
+btn:hover {
+  background-color: #555;
+}
+
+btn:active {
+  background-color: black;
+}
+
+btn:visited {
+  background-color: #ccc;
+}
