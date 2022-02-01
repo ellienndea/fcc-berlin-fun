@@ -17,19 +17,46 @@
         <title>Basic Webpage</title>
     </head>
     <body>
-        <header></header>
-        <div class="burger-menu">
-            <div class="bar"></div>
-            <nav>
+        <header>
+            <!-- Mobile menu -->
+            <div class="burger_menu">
+                <div class="burger_menu_bar"></div>
                 <ul>
-                    <li id="linda" class="menu_item">
-                        <a href="./linda/linda.html">Linda</a>
+                    <li class="burger_menu_bar_item">
+                        <a href="#linda">Linda</a>
                     </li>
-                    <li id="sammy" class="menu_item">
-                        <a href="./sammy">Sammy</a>
+                    <li class="burger_menu_bar_item">
+                        <a href="#sammy">Sammy</a>
                     </li>
-                    <li id="member2" class="menu_item">
+                    <li class="burger_menu_bar_item">
+                        <a href="#holger">Holger</a>
+                    </li>
+                    <li class="burger_menu_bar_item">
                         <a href="#">#</a>
+                    </li>
+                    <li class="burger_menu_bar_item">
+                        <a href="#">#</a>
+                    </li>
+                    <li class="burger_menu_bar_item">
+                        <a href="#">#</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Mobile menu END -->
+            <!-- Main title -->
+            <h1 class="title">freeCodeCamp Berlin Fun GitHub Project</h1>
+            <!-- Main title END -->
+            <!-- Header desktop menu -->
+            <div class="header_menu">
+                <ul>
+                    <li class="menu_item">
+                        <a href="#linda">Linda</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#sammy">Sammy</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#holger">Holger</a>
                     </li>
                     <li id="member3" class="menu_item">
                         <a href="#">#</a>
@@ -41,8 +68,23 @@
                         <a href="#">#</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+            <!-- Header desktop menu END -->
+        </header>
+        <main>
+            <section id="linda">
+                <a href="./linda/linda.html">Linda</a>
+            </section>
+            <section id="sammy">
+                <a href="./sammy">Sammy</a>
+            </section>
+            <section id="holger">
+                <a href="./holger/holger.html">Holger's page</a>
+            </section>
+            <section id="member3"></section>
+            <section id="member4"></section>
+            <section id="member5"></section>
+        </main>
         <footer></footer>
         <script src="app.js"></script>
     </body>

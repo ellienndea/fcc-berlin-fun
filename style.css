@@ -11,7 +11,7 @@ html {
 
 body {
   background: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Courier New", monospace;
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@ li {
   padding: 0.4em;
 }
 
-.burger-menu .bar:after, .burger-menu .bar:before, .burger-menu .bar {
+header .burger_menu_bar:after, header .burger_menu_bar:before, header .burger_menu_bar {
   transition: all 0.25s;
   content: "";
   position: absolute;
@@ -34,10 +34,15 @@ li {
   height: 6px;
   width: 30px;
   border-radius: 15px;
-  background-color: #000;
+  background-color: #fff;
 }
 
-.burger-menu {
+header {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+header .burger_menu {
   transition: all 0.25s;
   position: fixed;
   top: 10px;
@@ -47,24 +52,23 @@ li {
   z-index: 1;
   cursor: pointer;
 }
-.burger-menu .bar {
+header .burger_menu_bar {
   position: fixed;
   left: 12px;
   top: 24px;
 }
-.burger-menu .bar:before {
+header .burger_menu_bar:before {
   top: -8px;
 }
-.burger-menu .bar:after {
+header .burger_menu_bar:after {
   top: 8px;
 }
-.burger-menu ul {
+header .burger_menu ul {
   transition: all 0s;
   position: fixed;
   left: -9000px;
 }
-
-.menu-expanded {
+header .menu-expanded {
   text-align: center;
   height: 100%;
   width: 100%;
@@ -73,35 +77,92 @@ li {
   left: 0;
   background-color: rgba(0, 0, 0, 0.85);
 }
-.menu-expanded ul {
+header .menu-expanded ul {
   padding: 5rem 0 0 0;
   position: relative;
   left: 0;
   z-index: 2;
 }
-.menu-expanded .menu_item a {
+header .menu-expanded .burger_menu_bar {
+  background: transparent;
+}
+header .menu-expanded .burger_menu_bar:before {
+  top: 0px;
+  transform: rotate(45deg);
+  background: white;
+}
+header .menu-expanded .burger_menu_bar:after {
+  top: 0px;
+  transform: rotate(-45deg);
+  background: white;
+}
+header .menu-expanded .burger_menu_bar_item a {
   text-decoration: none;
   font-size: 2em;
   padding: 5px;
   color: #fff;
   display: block;
 }
-.menu-expanded .menu_item a:hover {
+header .menu-expanded .burger_menu_bar_item a:hover {
   background: rgba(255, 255, 255, 0.8);
   color: #333;
 }
-.menu-expanded .bar {
-  background: transparent;
+header .title {
+  color: #fff;
+  line-height: 1.5;
+  padding: 40px;
+  text-align: center;
 }
-.menu-expanded .bar:before {
-  top: 0px;
-  transform: rotate(45deg);
-  background: white;
+header .header_menu {
+  width: 100%;
 }
-.menu-expanded .bar:after {
-  top: 0px;
-  transform: rotate(-45deg);
-  background: white;
+header .header_menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0 2vh 0;
+}
+header .header_menu ul a {
+  font-weight: bold;
+  color: #fff;
+  margin: auto;
+  font-size: 2em;
+  text-decoration: none;
+}
+header .header_menu ul a:hover {
+  color: #999999;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main section {
+  width: 250px;
+  height: 150px;
+  margin: 40px 20px;
+  border: 4px solid #000;
+  display: flex;
+}
+main section a,
+main section a:visited {
+  font-weight: bold;
+  color: #000;
+  margin: auto;
+  font-size: 2em;
+}
+
+@media (min-width: 768px) {
+  .burger_menu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header_menu {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
