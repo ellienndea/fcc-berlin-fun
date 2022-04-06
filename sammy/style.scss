@@ -1,0 +1,66 @@
+%cardSide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('./61f52086e2055.jpg');
+
+    .flip {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        perspective: 1000px;
+        width: 250px;
+        height: 350px;
+
+
+        &_card {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 0.7s ease;
+            position: relative;
+            box-shadow: 0px 0px 6px 2px #ffffff50;
+            border-radius: 12px;
+            color: white;
+
+            &:hover {
+                transform: rotateY(180deg);
+            }
+
+            &_front {
+                @extend %cardSide;
+
+                &_photo {
+                    background-image: url('./bestBoi.jpeg');
+                    width: 150px;
+                    height: 150px;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &_back {
+                @extend %cardSide;
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
